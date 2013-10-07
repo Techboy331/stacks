@@ -21,14 +21,21 @@ public class IntStack{
 	return stack[top-1];
     }   
 
+    int peekD(int n){ //Chris, this returns a specific number in the stack
+	return stack[top-n];
+    }
+
     public static void main(String[]args){
 	IntStack is = new IntStack(10);
 	is.push(4);
 	is.push(5);
 	is.push(6);
 	int val = is.pop();
-	System.out.println(val);
+	//System.out.println(val);
+	System.out.println(is.peekD(1));
+	
     }
+  
 }
  
 
