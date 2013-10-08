@@ -19,15 +19,27 @@ public class IntStack{
     }
     int peek(){
 	return stack[top-1];
+  
     }   
+    
+    //Lila Lowest Number In Stack
+    int low(){
+	if(top!=0){
+	    return stack[0];
+	}
+	return 0;
+    }
+    
 
     public static void main(String[]args){
 	IntStack is = new IntStack(10);
-	is.push(4);
+	is.push(2);
 	is.push(5);
 	is.push(6);
-	int val = is.pop();
-	System.out.println(val);
+
+	//test for lowest:
+	int low = is.low();
+	System.out.println(low);
     }
 }
  
