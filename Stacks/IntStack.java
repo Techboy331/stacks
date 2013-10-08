@@ -21,7 +21,7 @@ public class IntStack{
 	return stack[top-1];
     }   
     
-    //Lila Lowest Number In Stack
+    //Lila: Lowest Number In Stack
     int low(){
 	if(top!=0){
 	    return stack[0];
@@ -29,8 +29,14 @@ public class IntStack{
 	return 0;
     }
     
-
-    int peekD(int n){ //Chris, this returns a specific number in the stack
+    //Shazy: Size of Stack
+    int sizeS(){
+	int size = top+1;
+	return size;
+    }  
+    
+    //Chris: this returns a specific number in the stack
+    int peekD(int n){
 	return stack[top-n];
     }
 
@@ -41,12 +47,16 @@ public class IntStack{
 	is.push(6);
 	int val = is.pop();
 	//System.out.println(val);
-	System.out.println(is.peekD(1));
-	
 
+	System.out.println("Peek " + is.peekD(1));
+	
 	//test for lowest:
 	int low = is.low();
-	System.out.println(low);
+	System.out.println("Lowest number is: " + low);
+
+	//test for size:
+	int sizestack = is.sizeS();
+	System.out.println("Size of stack is: " + sizestack);
     }
 }
  
