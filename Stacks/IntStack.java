@@ -41,13 +41,20 @@ public class IntStack{
     }
 
     public static void main(String[]args){
+	Scanner scan = new Scanner(system.in);
 	IntStack is = new IntStack(10);
+
+	//setting up the stack (intial stack)
 	is.push(4);
 	is.push(5);
 	is.push(6);
-	int val = is.pop();
-	//System.out.println(val);
+	
+	//MENU, NOT DONE SORRY -shazy
+	//System.out.println("What would you like to do with this stack?");
+	//System.out.println("Reply with 'push' 'pop' 'peek' 'peek at depth' 'lowest' or 'size'");
+	//next time I will work on replying to these options
 
+	//peek at depth:
 	System.out.println("Peek " + is.peekD(1));
 	
 	//test for lowest:
