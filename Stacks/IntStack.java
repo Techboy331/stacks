@@ -17,17 +17,30 @@ public class IntStack{
 	return stack[--top];//you can also write this
 	//	top--;
     }
-    int peek(){
+    int peekt(){
 	return stack[top-1];
     }   
     
-    //Lila Lowest Number In Stack
-    int low(){
+    //Lila Lowest Position In Stack
+    int peekb(){
 	if(top!=0){
 	    return stack[0];
 	}
 	return 0;
     }
+   
+    //Lila Lowest Number In Stack
+    int low(){
+	int lowest = 0;
+	for(int i = stack.length-1; i>0; i--) {	   
+	    if(stack[i-1] < stack[i])
+		lowest = stack[i-1];
+
+	       }
+	return lowest;
+	}
+
+
     
 
     int peekD(int n){ //Chris, this returns a specific number in the stack
@@ -41,10 +54,14 @@ public class IntStack{
 	is.push(6);
 	int val = is.pop();
 	//System.out.println(val);
-	System.out.println(is.peekD(1));
+	//	System.out.println(is.peekD(1));
 	
 
 	//test for lowest:
+	int peekb = is.peekb();
+	//	System.out.println(peekb);
+
+	//test for lowest
 	int low = is.low();
 	System.out.println(low);
     }
