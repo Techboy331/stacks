@@ -26,7 +26,7 @@ public class IntStack{
 	return stack[top-1];
     }   
     
-    //Lila Lowest Position In Stack
+    //Lila: Lowest Position In Stack
     int peekb(){
 	if(top!=0){
 	    return stack[0];
@@ -34,7 +34,7 @@ public class IntStack{
 	return 0;
     }
    
-    //Lila Lowest Number In Stack
+    //Lila: Lowest Number In Stack
     int low(){
 	int lowest = 0;
 	for(int i = stack.length-1; i>0; i--) {	   
@@ -43,11 +43,7 @@ public class IntStack{
 	    
 	}
 	return lowest;
-    }
-    
-
-    
-
+    } 
 
 	//Shazy: Size of Stack
 	int sizeS(){
@@ -77,7 +73,7 @@ public class IntStack{
 		//MENU loop by Shazy
 		while (run_again == 'Y') {
 			System.out.println("What would you like to do with this stack?");
-			System.out.println("Reply with 'push' 'pop' 'peek' 'peek at depth' 'lowest' or 'size'");
+			System.out.println("Reply with 'push' 'pop' 'peek' 'peek at depth' 'peek bottom'  'lowest' or 'size'");
 
 			//to push something onto the stack
 			if (choice == "push") {
@@ -103,9 +99,14 @@ public class IntStack{
 			     System.out.println("Peek " + is.peekD(peek_dep));
 			}
 			
-			//to show the lowest number
+			//to show the number with lowest value
 			else if (choice == "lowest") {
 			     System.out.println("Lowest number is: " + is.low());
+			}
+
+			//to show the number at the bottom of the stack
+			else if (choice == "peek bottom") {
+			    System.out.println("The number at the bottom is: " + is.peekb());
 			}
 
 			//to show how big the stack is
