@@ -20,14 +20,41 @@ public class IntStack{
     int peek(){
 	return stack[top-1];
     }   
+    
+    //Emily: Return Multiple Items in Stack
+   public int[] multiItem(int n){
+	int[] multi = new int[n]; 
+	for(int i=0; i<n; i++)
+	    {	    
+		multi[i]=stack[top-i];
+	    }
+	return multi; 
+    }
+
+    //Emily: Print multi item
+    void print(int[] multi)
+    {
+	int n = multi.length;
+	for(int i=0; i<n; i++)
+	    {
+		System.out.print(multi[i] + ",  "); 
+	    }
+	System.out.println();
+	//mi=i we want to set mi to multi in the other function above
+	//this function will use a for loop to print out each item in multi
+	//this function is run in the main
+    }
 
     public static void main(String[]args){
 	IntStack is = new IntStack(10);
 	is.push(4);
 	is.push(5);
 	is.push(6);
-	int val = is.pop();
-	System.out.println(val);
+	//int val = is.pop();
+	//System.out.println(val);
+	is.print(is.multiItem(2));
+	
+      
     }
 }
  
