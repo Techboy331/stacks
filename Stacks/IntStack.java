@@ -1,37 +1,53 @@
+import java.util.Scanner;
 /**
  * Int Stack - a program to manipulate a stack of integers
  * @author Shazy, Lila, Chris, Emily
  */
 public class IntStack{
-	int[] stack;
-	int top=0;
+    int[] stack;
+    int top=0;
+    
+    public IntStack(int n){ //param optional: size of stack
+	stack = new int[n];
+    }
 
-	public IntStack(int n){ //param optional: size of stack
-		stack = new int[n];
+    boolean isEmpty(){
+       return top == 0;
+    }
+    void push(int n){
+	stack[top++]=n; //you can write that here
+	//	top++;
+    }
+    int pop(){
+	return stack[--top];//you can also write this
+	//	top--;
+    }
+    int peek(){
+	return stack[top-1];
+    }   
+    
+    //Lila Lowest Position In Stack
+    int peekb(){
+	if(top!=0){
+	    return stack[0];
 	}
+	return 0;
+    }
+   
+    //Lila Lowest Number In Stack
+    int low(){
+	int lowest = 0;
+	for(int i = stack.length-1; i>0; i--) {	   
+	    if(stack[i-1] < stack[i])
+		lowest = stack[i-1];
+	    
+	}
+	return lowest;
+    }
+    
 
-	boolean isEmpty(){
-		return top == 0;
-	}
-	void push(int n){
-		stack[top++]=n; //you can write that here
-		//	top++;
-	}
-	int pop(){
-		return stack[--top];//you can also write this
-		//	top--;
-	}
-	int peek(){
-		return stack[top-1];
-	}   
+    
 
-	//Lila: Lowest Number In Stack
-	int low(){
-		if(top!=0){
-			return stack[0];
-		}
-		return 0;
-	}
 
 	//Shazy: Size of Stack
 	int sizeS(){
