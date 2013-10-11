@@ -67,33 +67,34 @@ public class IntStack{
 			if (choice == "push") {
 			    System.out.println("What would you like to push? enter an integer.");
 			    push_num = scan.nextInt();
+			    is.push(push_num);
 			}
 			
 			//to pop the top number off the stack
 			else if (choice == "pop") {
-			    is.pop();
+			    System.out.println("You popped " + is.pop());
 			}
 
 			//to peek at the top number
 			else if (choice == "peek") {
-			    is.peek();
+			    System.out.println("The top number is " + is.peek());
 			}
 			
 			//to peek at a certain depth
 			else if (choice == "peek at depth") {
-				System.out.println("How deep? enter an integer.");
-				peek_dep = scan.nextInt();
-				System.out.println("Peek " + is.peekD(peek_dep));
+			     System.out.println("How deep? enter an integer.");
+			     peek_dep = scan.nextInt();
+			     System.out.println("Peek " + is.peekD(peek_dep));
 			}
 			
 			//to show the lowest number
 			else if (choice == "lowest") {
-				System.out.println("Lowest number is: " + is.low());
+			     System.out.println("Lowest number is: " + is.low());
 			}
 
 			//to show how big the stack is
 			else if (choice == "size") {
-				System.out.println("Size of stack is: " + is.sizeS() + " integers.");
+			     System.out.println("Size of stack is: " + is.sizeS() + " integers.");
 			}
 			
 			//ask if the user wants to do something else with the stack
